@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07131c">
+  <title>VEYAL — Prototype</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">EARLY PROTOTYPE</p>
+      <h1>VEYAL</h1>
+    </div>
+    <p class="subtitle">Hold the line. Destroy the sources.</p>
+  </header>
+
+  <main>
+    <section class="intro panel">
+      <div>
+        <h2>The Ooze is spreading.</h2>
+        <p>This is the initial browser scaffold. The battlefield simulation will be added in the first gameplay milestone.</p>
+      </div>
+      <button id="new-map" type="button">Generate new map</button>
+    </section>
+
+    <section class="game-layout">
+      <div class="field panel">
+        <div class="field-heading">
+          <h2>Battlefield preview</h2>
+          <span id="seed-label">Seed: —</span>
+        </div>
+        <canvas id="battlefield" width="900" height="540" aria-label="Procedurally generated terrain preview"></canvas>
+        <p class="hint">Preview only: terrain colours and source markers. Fluids, structures, and combat are not implemented yet.</p>
+      </div>
+
+      <aside class="sidebar panel">
+        <h2>Mission status</h2>
+        <dl>
+          <div><dt>Ooze sources</dt><dd id="source-count">0</dd></div>
+          <div><dt>Energy</dt><dd>Not implemented</dd></div>
+          <div><dt>Simulation</dt><dd id="simulation-status">Preview only</dd></div>
+        </dl>
+        <div class="legend">
+          <h3>Terrain key</h3>
+          <p><span class="swatch low"></span> Low ground</p>
+          <p><span class="swatch mid"></span> Mid elevation</p>
+          <p><span class="swatch high"></span> High ground</p>
+          <p><span class="swatch source"></span> Source marker</p>
+        </div>
+        <p class="disclaimer">Foundation build — not yet a playable strategy game.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <span>VEYAL · Open-source browser strategy project</span>
+    <span>GPL-3.0 · Early development</span>
+  </footer>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
